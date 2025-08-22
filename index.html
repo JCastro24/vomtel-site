@@ -1,158 +1,51 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vomtel · AWS Cloud Quickstart for SMBs</title>
-<meta name="description" content="Vomtel (Castro Enterprise DBA) helps SMBs adopt AWS with bill reviews, cost optimization, starter migrations, and backup/DR quickstarts. APN partner-ready and co-sell friendly.">
-<meta name="keywords" content="AWS partner, AWS migration, AWS cost optimization, AWS backup DR, cloud quickstart, SMB cloud, ACE co-sell, APN partner">
-<style>
-:root{
-  --bg:#0b1220;--fg:#e6edf3;--muted:#9fb0c6;--accent:#3b82f6;--card:#121a2b;--line:#1f2a44;
-}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;background:radial-gradient(1000px 600px at 85% -10%,#1b2540 0%,#0b1220 60%);color:var(--fg);line-height:1.6}
-.container{width:min(1100px,92%);margin:0 auto}
-header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
-.brand{font-weight:800;letter-spacing:.3px}
-.badge{font-size:12px;color:var(--muted)}
-nav a{color:var(--muted);text-decoration:none;margin-left:14px}
-.hero{padding:54px 0 24px;display:grid;gap:14px}
-.hero h1{margin:0;font-size:clamp(28px,4vw,44px)}
-.hero p{color:var(--muted);max-width:760px;margin:4px 0 0}
-.cta{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
-.btn{background:var(--accent);color:#05142e;padding:12px 16px;border-radius:10px;font-weight:700;text-decoration:none;display:inline-block}
-.btn.secondary{background:transparent;border:1px solid var(--line);color:var(--fg)}
-section{padding:26px 0}
-.cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.card{background:linear-gradient(180deg,var(--card),#0e1627);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:0 12px 24px rgba(0,0,0,.25)}
-.card h3{margin:0 0 6px}
-ul{margin:8px 0 0 18px;color:var(--muted)}
-.split{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;align-items:start}
-.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
-.kicker{font-size:13px;color:#b6c5da;text-transform:uppercase;letter-spacing:.12em}
-.small{font-size:13px;color:var(--muted)}
-footer{padding:22px 0;border-top:1px solid var(--line);color:var(--muted);margin-top:30px}
-input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0c1425;color:var(--fg)}
-.form-row{display:grid;gap:10px;grid-template-columns:1fr 1fr}
-@media (max-width:820px){.split{grid-template-columns:1fr}header{flex-direction:column;align-items:flex-start;gap:6px}.form-row{grid-template-columns:1fr}}
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VOMTEL AWS Solutions</title>
+    <style>
+        body {font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f8; color: #333;}
+        header {background: #0073bb; color: #fff; padding: 20px; text-align: center;}
+        h1 {margin: 0;}
+        section {max-width: 600px; margin: 40px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);}
+        input, textarea, button {width: 100%; padding: 12px; margin-top: 10px; border: 1px solid #ccc; border-radius: 5px;}
+        button {background-color: #0073bb; color: #fff; cursor: pointer; border: none;}
+        button:hover {background-color: #005f99;}
+        footer {text-align: center; margin: 30px 0; color: #777;}
+    </style>
 </head>
 <body>
-<header class="container">
-  <div>
-    <div class="brand">VOMTEL</div>
-    <div class="badge">CASTRO Enterprise · APN partner-ready (Services Path)</div>
-  </div>
-  <nav>
-    <a href="#offers">Solutions</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <header>
+        <h1>VOMTEL AWS Solutions</h1>
+        <p>Your Partner for Scalable Cloud Growth</p>
+    </header>
 
-<main class="container">
-  <section class="hero">
-    <span class="kicker">AWS Cloud Quickstart for SMBs</span>
-    <h1>Land on AWS fast—no jargon, no heavy lift.</h1>
-    <p>We help small and mid-sized teams adopt AWS with <strong>free bill reviews</strong>, <strong>10–30% cost optimization</strong>, <strong>starter migrations</strong>, and <strong>backup/DR quickstarts</strong>. We register opportunities in ACE and collaborate with AWS account teams for smooth co‑sell.</p>
-    <div class="cta">
-      <a class="btn" href="mailto:jcastro@vomtel.com?subject=AWS%20Quickstart%20-%20Request">Get a free bill review</a>
-      <a class="btn secondary" href="#offers">See solutions</a>
-    </div>
-    <div class="small">* We’re APN member–ready; program benefits and funding are subject to AWS eligibility.</div>
-  </section>
+    <section>
+        <h2>Get a Free AWS Consultation</h2>
+        <p>Let us help you scale your business with AWS. Fill out the form below and we’ll contact you ASAP.</p>
+        <form action="https://formsubmit.co/jcastro@vomtel.com" method="POST">
+            <input type="hidden" name="_next" value="https://jcastro24.github.io/vomtel-site/thanks.html">
+            <input type="hidden" name="_captcha" value="false">
+            <label for="name">Full Name</label>
+            <input type="text" name="name" id="name" required />
 
-  <section id="offers">
-    <div class="cards">
-      <div class="card">
-        <h3>Migrations Lite (2‑week)</h3>
-        <ul>
-          <li>Discovery & right‑sizing</li>
-          <li>Simple lift to EC2/RDS or S3 static hosting</li>
-          <li>Handoff with runbook + cost guardrails</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Cost Optimization</h3>
-        <ul>
-          <li>Bill review, tagging & rightsizing</li>
-          <li>Auto‑start/stop non‑prod; S3 lifecycle</li>
-          <li>Monthly report; typical savings 10–30%</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Backup & DR Quickstart</h3>
-        <ul>
-          <li>S3 + Glacier policies, versioning</li>
-          <li>Cross‑region replication optional</li>
-          <li>Tested restore plan</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Managed Cloud (Starter)</h3>
-        <ul>
-          <li>Monitoring, patch cadence, IAM hygiene</li>
-          <li>Monthly optimization & support</li>
-          <li>Cancel anytime</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+            <label for="email">Business Email</label>
+            <input type="email" name="email" id="email" required />
 
-  <section class="split" id="process">
-    <div class="panel">
-      <h3>How we engage (co‑sell friendly)</h3>
-      <ul>
-        <li><strong>1. Qualify:</strong> Free 30‑min call + bill review.</li>
-        <li><strong>2. Register:</strong> We log in ACE and align with AWS reps.</li>
-        <li><strong>3. Prove value:</strong> 10–14 day quickstart (migration, DR, or savings).</li>
-        <li><strong>4. Operate:</strong> Simple monthly plan with measurable outcomes.</li>
-      </ul>
-      <p class="small">Industries: SaaS, legal, healthcare (non‑PHI workloads), professional services. Geography: United States.</p>
-    </div>
-    <div class="panel">
-      <h3>Why AWS sends us work</h3>
-      <ul>
-        <li>Clear packaged offers that close fast (easy wins for customers).</li>
-        <li>ACE‑registered, partner‑to‑partner friendly.</li>
-        <li>Customer‑first: small retainers, cancel anytime.</li>
-      </ul>
-      <p class="small">Place APN badge here once approved.</p>
-    </div>
-  </section>
+            <label for="phone">Phone Number</label>
+            <input type="text" name="phone" id="phone" required />
 
-  <section id="contact" class="split">
-    <div class="panel">
-      <h3>Get a proposal</h3>
-      <form action="mailto:jcastro@vomtel.com" method="post" enctype="text/plain">
-        <div class="form-row">
-          <input name="name" placeholder="Your name" required>
-          <input name="company" placeholder="Company">
-        </div>
-        <div class="form-row">
-          <input name="email" type="email" placeholder="Work email" required>
-          <input name="phone" placeholder="Phone">
-        </div>
-        <textarea name="notes" rows="5" placeholder="Tell us about your AWS goals (migration, cost savings, backup)…"></textarea>
-        <div class="cta"><button class="btn" type="submit">Send</button>
-        <a class="btn secondary" href="mailto:jcastro@vomtel.com">Email instead</a></div>
-      </form>
-    </div>
-    <div class="panel">
-      <h3>Contact</h3>
-      <p class="small">
-        Email: <a href="mailto:jcastro@vomtel.com">jcastro@vomtel.com</a><br>
-        Company: Castro Enterprise (DBA Vomtel)<br>
-        Location: United States
-      </p>
-      <p class="small">We follow AWS trademark & co‑sell guidelines. This page does not imply AWS endorsement.</p>
-    </div>
-  </section>
-</main>
+            <label for="message">How can we help you?</label>
+            <textarea name="message" id="message" rows="4"></textarea>
 
-<footer class="container">
-  <div class="small">© <span id="y"></span> CASTRO Enterprise · DBA Vomtel · All rights reserved.</div>
-</footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+            <button type="submit">Request Consultation</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2025 VOMTEL. All Rights Reserved.
+    </footer>
 </body>
 </html>
