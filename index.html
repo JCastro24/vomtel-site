@@ -1,51 +1,209 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VOMTEL AWS Solutions</title>
-    <style>
-        body {font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f8; color: #333;}
-        header {background: #0073bb; color: #fff; padding: 20px; text-align: center;}
-        h1 {margin: 0;}
-        section {max-width: 600px; margin: 40px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);}
-        input, textarea, button {width: 100%; padding: 12px; margin-top: 10px; border: 1px solid #ccc; border-radius: 5px;}
-        button {background-color: #0073bb; color: #fff; cursor: pointer; border: none;}
-        button:hover {background-color: #005f99;}
-        footer {text-align: center; margin: 30px 0; color: #777;}
-    </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>VOMTEL · AWS Cloud Quickstart for SMBs</title>
+<meta name="description" content="Land on AWS fast—no jargon, no heavy lift. Free bill reviews, 10–30% cost optimization, starter migrations, and backup/DR quickstarts.">
+<style>
+:root{
+  --bg:#0b1220; --fg:#e6edf3; --muted:#9fb0c6; --line:#1f2a44;
+  --card:#121a2b; --accent:#22c55e; --accent-2:#2563eb;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:radial-gradient(1100px 650px at 85% -10%,#1b2540 0%,#0b1220 60%);color:var(--fg);font-family:Inter,system-ui,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;line-height:1.6}
+a{color:inherit}
+.container{width:min(1100px,92%);margin:0 auto}
+
+/* Header / Nav */
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.brand{font-weight:900;letter-spacing:.3px}
+.subbrand{font-size:12px;color:var(--muted)}
+nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+nav a:hover{color:#fff}
+
+/* Hero */
+.hero{padding:56px 0 24px;display:grid;gap:14px}
+.kicker{font-size:12px;letter-spacing:.18em;color:#cfe0ff;text-transform:uppercase}
+.hero h1{font-size:clamp(32px,4.2vw,48px);margin:0}
+.hero p{color:var(--muted);max-width:840px;margin:4px 0 8px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+.btn{display:inline-block;padding:14px 20px;border-radius:12px;font-weight:800;text-decoration:none}
+.btn.primary{background:var(--accent-2);color:#fff}
+.btn.secondary{background:#19253f;color:#fff;border:1px solid var(--line)}
+
+/* Cards */
+section{padding:28px 0}
+.cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:linear-gradient(180deg,var(--card),#0f1a30);border:1px solid var(--line);border-radius:16px;padding:18px}
+.card h3{margin:0 0 8px}
+.card ul{margin:8px 0 0 18px;color:var(--muted)}
+
+/* Split panels */
+.split{display:grid;grid-template-columns:1.08fr 1fr;gap:18px;align-items:start}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.small{font-size:13px;color:var(--muted)}
+
+/* Contact form (kept minimal) */
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0e1830;color:var(--fg)}
+button.cta-btn{background:var(--accent);color:#052e16;border:none;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer}
+.thin{font-weight:400}
+
+/* Calendly section */
+#book h2{text-align:center;margin:0 0 12px;font-size:28px}
+.calendly-inline-widget{min-width:320px;height:740px;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+
+/* Footer */
+footer{padding:26px 0;border-top:1px solid var(--line);color:var(--muted);margin-top:36px}
+
+/* Responsive */
+@media(max-width:900px){
+  .split{grid-template-columns:1fr}
+  header{flex-direction:column;align-items:flex-start;gap:6px}
+  nav{margin-top:6px}
+}
+</style>
+
+<!-- Calendly embed assets -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
+
 <body>
-    <header>
-        <h1>VOMTEL AWS Solutions</h1>
-        <p>Your Partner for Scalable Cloud Growth</p>
-    </header>
+<header class="container">
+  <div>
+    <div class="brand">VOMTEL</div>
+    <div class="subbrand">CASTRO Enterprise · APN partner-ready (Services Path)</div>
+  </div>
+  <nav>
+    <a href="#solutions">Solutions</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+    <a href="#book">Book</a>
+  </nav>
+</header>
 
-    <section>
-        <h2>Get a Free AWS Consultation</h2>
-        <p>Let us help you scale your business with AWS. Fill out the form below and we’ll contact you ASAP.</p>
-        <form action="https://formsubmit.co/jcastro@vomtel.com" method="POST">
-            <input type="hidden" name="_next" value="https://jcastro24.github.io/vomtel-site/thanks.html">
-            <input type="hidden" name="_captcha" value="false">
-            <label for="name">Full Name</label>
-            <input type="text" name="name" id="name" required />
+<main class="container">
 
-            <label for="email">Business Email</label>
-            <input type="email" name="email" id="email" required />
+  <!-- HERO -->
+  <section class="hero">
+    <span class="kicker">AWS Cloud Quickstart for SMBs</span>
+    <h1>Land on AWS fast—no jargon, no heavy lift.</h1>
+    <p>We help small and mid-sized teams adopt AWS with <b>free bill reviews, 10–30% cost optimization, starter migrations, and backup/DR quickstarts</b>. We register opportunities in ACE and collaborate with AWS account teams for smooth co-sell.</p>
+    <div class="cta">
+      <a class="btn primary" href="#book">📅 Book free AWS consultation</a>
+      <a class="btn secondary" href="#solutions">See solutions</a>
+    </div>
+    <div class="small">* We’re APN member-ready; program benefits and funding are subject to AWS eligibility.</div>
+  </section>
 
-            <label for="phone">Phone Number</label>
-            <input type="text" name="phone" id="phone" required />
+  <!-- SOLUTIONS -->
+  <section id="solutions">
+    <div class="cards">
+      <div class="card">
+        <h3>Migrations Lite (2-week)</h3>
+        <ul>
+          <li>Discovery & right-sizing workshop</li>
+          <li>Lift & shift to EC2/RDS or S3 static hosting</li>
+          <li>Runbook handoff + cost guardrails</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Cost Optimization</h3>
+        <ul>
+          <li>Bill review, tagging & rightsizing</li>
+          <li>Start/stop non-prod; S3 lifecycle policies</li>
+          <li>Monthly report; typical savings 10–30%</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Backup & DR Quickstart</h3>
+        <ul>
+          <li>S3 + Glacier policies, versioning</li>
+          <li>Cross-region replication (optional)</li>
+          <li>Restore test + documented plan</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Managed Cloud (Starter)</h3>
+        <ul>
+          <li>Monitoring & patch cadence</li>
+          <li>IAM hygiene & least privilege</li>
+          <li>Monthly optimization & support</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-            <label for="message">How can we help you?</label>
-            <textarea name="message" id="message" rows="4"></textarea>
+  <!-- PROCESS -->
+  <section id="process" class="split">
+    <div class="panel">
+      <h3>How we engage</h3>
+      <ol class="small">
+        <li><b>Qualify:</b> 30-min call + free bill review</li>
+        <li><b>Register:</b> We log the opportunity in ACE and align with AWS reps</li>
+        <li><b>Prove value:</b> 10–14 day quickstart (migration, DR, or savings)</li>
+        <li><b>Operate:</b> Simple monthly plan with measurable outcomes</li>
+      </ol>
+    </div>
+    <div class="panel">
+      <h3>Why AWS co-sells with us</h3>
+      <ul class="small">
+        <li>Packaged offers that close fast (easy wins for customers)</li>
+        <li>ACE-registered opportunities; partner-friendly</li>
+        <li>Low friction, cancel anytime starter plans</li>
+      </ul>
+    </div>
+  </section>
 
-            <button type="submit">Request Consultation</button>
-        </form>
-    </section>
+  <!-- CALENDLY -->
+  <section id="book">
+    <h2>Schedule your free AWS consultation</h2>
+    <div class="calendly-inline-widget"
+         data-url="https://calendly.com/j-castro-24/letsconnect"
+         style="margin-top:12px;"></div>
+    <p class="small" style="text-align:center;margin-top:8px">
+      If the scheduler doesn’t load, <a href="https://calendly.com/j-castro-24/letsconnect" target="_blank" rel="noopener" style="color:#9be7ff">open Calendly in a new tab</a>.
+    </p>
+  </section>
 
-    <footer>
-        &copy; 2025 VOMTEL. All Rights Reserved.
-    </footer>
+  <!-- CONTACT (kept for alternate lead path) -->
+  <section id="contact" class="split">
+    <div class="panel">
+      <h3>Prefer email?</h3>
+      <form action="https://formsubmit.co/jcastro@vomtel.com" method="POST">
+        <input type="hidden" name="_subject" value="New AWS Lead · Vomtel" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <div class="form-row">
+          <input name="name" placeholder="Your name" required />
+          <input name="company" placeholder="Company" />
+        </div>
+        <div class="form-row">
+          <input type="email" name="email" placeholder="Work email" required />
+          <input name="phone" placeholder="Phone" required />
+        </div>
+        <textarea name="notes" rows="4" placeholder="Tell us about your AWS goals (migration, savings, backup)…"></textarea>
+        <div style="margin-top:10px">
+          <button class="cta-btn" type="submit">Send</button>
+        </div>
+      </form>
+      <p class="small" style="margin-top:8px">We’ll reply from <b>jcastro@vomtel.com</b>. You can also book a time above.</p>
+    </div>
+    <div class="panel">
+      <h3>Contact</h3>
+      <p class="small">Email: <a href="mailto:jcastro@vomtel.com" style="color:#9be7ff">jcastro@vomtel.com</a></p>
+      <p class="small thin">Castro Enterprise (DBA Vomtel)</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="container">
+  <div class="small">© <span id="y"></span> Castro Enterprise · All rights reserved.</div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
+
