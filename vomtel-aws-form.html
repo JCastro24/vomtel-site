@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vomtel · AWS Consultation & Demo</title>
+<meta name="description" content="Book a free AWS consultation with Vomtel. Quickstart migrations, cost optimization (10–30%), and backup/DR.">
+<style>
+:root{--bg:#0b1220;--fg:#e6edf3;--muted:#9fb0c6;--line:#1f2a44;--card:#121a2b;--accent:#22c55e;}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;background:radial-gradient(1000px 600px at 85% -10%,#1b2540 0%,#0b1220 60%);color:var(--fg);line-height:1.6}
+.container{width:min(1100px,92%);margin:0 auto}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.brand{font-weight:800;letter-spacing:.3px}
+.badge{font-size:12px;color:var(--muted)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+h1{font-size:clamp(26px,4vw,40px);margin:18px 0}
+label{display:block;font-size:13px;color:#cfe0ff;margin-top:10px}
+input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0e1830;color:var(--fg)}
+button{background:var(--accent);color:#052e16;padding:12px 16px;border:none;border-radius:12px;font-weight:800;cursor:pointer;margin-top:12px}
+.small{font-size:13px;color:var(--muted)}
+hr{border:0;border-top:1px solid var(--line);margin:18px 0}
+@media(max-width:880px){.split{grid-template-columns:1fr}}
+</style>
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</head>
+<body>
+<header class="container">
+  <div>
+    <div class="brand">VOMTEL</div>
+    <div class="badge">CASTRO Enterprise · APN Services Path (member-ready)</div>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Free AWS Consultation — talk to us, then pick a time</h1>
+  <div class="split">
+    <div class="panel">
+      <h3>Step 1 — Tell us how to reach you</h3>
+      <form action="https://formsubmit.co/jcastro@vomtel.com" method="POST" onsubmit="document.getElementById('submitBtn').textContent='Sending…';document.getElementById('submitBtn').disabled=true;">
+        <input type="hidden" name="_subject" value="New AWS Lead · Vomtel">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <!-- After email is sent, go to interstitial page that auto-opens Calendly -->
+        <input type="hidden" name="_next" value="https://jcastro24.github.io/vomtel-site/book.html">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <label>Name</label>
+        <input name="name" placeholder="Your name" required>
+        <label>Work Email</label>
+        <input name="email" type="email" placeholder="name@company.com" required>
+        <label>Phone</label>
+        <input name="phone" placeholder="(###) ###-####" required>
+        <label>Company</label>
+        <input name="company" placeholder="Company (optional)">
+        <label>Notes</label>
+        <textarea name="notes" rows="4" placeholder="Tell us about your AWS goals (migration, savings, backup)…"></textarea>
+        <button id="submitBtn" type="submit">Get Free Consultation</button>
+        <p class="small">Submitting sends your details to <strong>jcastro@vomtel.com</strong>. You’ll then choose a time on Calendly.</p>
+      </form>
+      <hr>
+      <p class="small">Prefer to skip the form?</p>
+      <p><a href="https://calendly.com/j-castro-24/letsconnect" style="color:#22c55e;text-decoration:none;font-weight:700">Open Calendly directly</a></p>
+    </div>
+    <div class="panel">
+      <h3>Step 2 — Or book right now</h3>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/j-castro-24/letsconnect" style="min-width:320px;height:720px;"></div>
+      <p class="small">If the scheduler doesn’t load, use the link above.</p>
+    </div>
+  </div>
+
+  <hr>
+  <div class="panel">
+    <h3>What we deliver</h3>
+    <ul class="small">
+      <li>14‑day Migration Lite to EC2/RDS or S3 static hosting</li>
+      <li>10–30% savings via billing review, rightsizing, start/stop, and S3 lifecycle</li>
+      <li>Backup/DR quickstart with tested restores</li>
+      <li>Month‑to‑month managed cloud options</li>
+    </ul>
+  </div>
+</main>
+
+<footer class="container">
+  <div class="small">Contact: <a href="mailto:jcastro@vomtel.com" style="color:#22c55e;text-decoration:none">jcastro@vomtel.com</a> · CASTRO Enterprise (DBA Vomtel)</div>
+  <div class="small">© <span id="y"></span> CASTRO Enterprise · All rights reserved.</div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
